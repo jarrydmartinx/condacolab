@@ -174,10 +174,10 @@ def install_from_url(
     condameta.mkdir(parents=True, exist_ok=True)
     pymaj, pymin = sys.version_info[:2]
 
-    with open(condameta / "pinned", "a") as f:
-        f.write(f"python {pymaj}.{pymin}.*\n")
-        f.write(f"python_abi {pymaj}.{pymin}.* *cp{pymaj}{pymin}*\n")
-        f.write(f"cudatoolkit {cuda_version}.*\n")
+#     with open(condameta / "pinned", "a") as f:
+#         f.write(f"python {pymaj}.{pymin}.*\n")
+#         f.write(f"python_abi {pymaj}.{pymin}.* *cp{pymaj}{pymin}*\n")
+#         f.write(f"cudatoolkit {cuda_version}.*\n")
 
     with open(prefix / ".condarc", "a") as f:
         f.write("always_yes: true\n")
